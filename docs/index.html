@@ -1,260 +1,257 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xray Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
-        }
-        table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-            border: 1px solid #eaecef;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #eaecef;
-            text-align: left;
-        }
-        th {
-            background-color: #f6f8fa;
-        }
-        code {
-            background-color: #f6f8fa;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-        pre {
-            background-color: #f6f8fa;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-            position: relative;
-        }
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #f6f8fa;
-            border: 1px solid #eaecef;
-            color: #333;
-            padding: 5px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: flex;
-            align-items: center;
-        }
-        .copy-button:hover {
-            background-color: #eaecef;
-        }
-        .material-icons {
-            font-size: 1.2em;
-        }
-        .install-options {
-            margin: 20px 0;
-        }
-        .install-option {
-            margin-bottom: 20px;
-        }
-        .note-box {
-            background-color: #f8f9fa;
-            border-left: 4px solid #007bff;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .warning-box {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h3>Documentation 1Clickxray</h3>
-
-        <h2>Overview</h2>
-        <div class="note-box">
-            <h3>System Requirements</h3>
-            <p>This script is designed for:</p>
-            <ul>
-                <li>Ubuntu operating system</li>
-                <li>Debian operating system</li>
-            </ul>
-            
-            <h3>Important Notes</h3>
-            <ul>
-                <li>After installation, type <code>menu</code> in terminal to display available options</li>
-                <li>This script is safe for reinstallation without requiring VPS rebuild</li>
-                <li>Supports IPv6-Only VPS with specific domain setup requirements</li>
-            </ul>
-        </div>
-
-        <div class="warning-box">
-            <h3>IPv6 Only VPS Setup Notice</h3>
-            <p>When using IPv6 Only VPS, during domain setup you <strong>must</strong> choose option #2 (use your own domain). Option #1 is not supported for IPv6 Only configurations.</p>
-        </div>
-
-        <h2>Protocol & Transport</h2>
-        <table>
-            <tr>
-                <th>Protocol & Transport</th>
-                <th>Network Port</th>
-            </tr>
-            <tr>
-                <td>Vmess Websocket</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Vless Websocket</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Trojan Websocket</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks Websocket</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks 2022 Websocket</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Vmess HTTPupgrade</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Vless HTTPupgrade</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Trojan HTTPupgrade</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks HTTPupgrade</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks 2022 HTTPupgrade</td>
-                <td>443 & 80</td>
-            </tr>
-            <tr>
-                <td>Vless XTLS-RPRX-VISION</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Trojan TCP TLS</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Vmess gRPC</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Vless gRPC</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Trojan gRPC</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks gRPC</td>
-                <td>443</td>
-            </tr>
-            <tr>
-                <td>Shadowsocks 2022 gRPC</td>
-                <td>443</td>
-            </tr>
-        </table>
-
-        <h2>Free Domain Registration</h2>
-        <p>Need a free domain for your project? Register easily at <a href="https://nic.us.kg" target="_blank">NIC US KG</a> to get your domain today!</p>
-        <a href="https://nic.us.kg" target="_blank">
-            <img src="https://img.shields.io/badge/Register-Free%20Domain-brightgreen" alt="Register Free Domain">
-        </a>
-
-        <h2>Installation Guide</h2>
-        <div class="install-options">
-            <div class="install-option">
-                <h3>Option 1: Using wget or curl</h3>
-                <div style="position: relative;">
-                    <pre><code id="install-command-1">bash -c "$(wget -qO- https://2667.us.kg/xrayv1)"</code></pre>
-                    <button class="copy-button" onclick="copyToClipboard('install-command-1')">
-                        <span class="material-icons">content_copy</span>
-                    </button>
-                </div>
-                <div style="position: relative;">
-                    <pre><code id="install-command-2">bash -c "$(curl -fsSL https://2667.us.kg/xrayv2)"</code></pre>
-                    <button class="copy-button" onclick="copyToClipboard('install-command-2')">
-                        <span class="material-icons">content_copy</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="install-option">
-                <h3>Option 2: Alternative Installation Method</h3>
-                <div style="position: relative;">
-                    <pre><code id="install-command-3">bash -c "$(wget -qO- https://2667.us.kg/alternatif1)"</code></pre>
-                    <button class="copy-button" onclick="copyToClipboard('install-command-3')">
-                        <span class="material-icons">content_copy</span>
-                    </button>
-                </div>
-                <div style="position: relative;">
-                    <pre><code id="install-command-4">bash -c "$(curl -fsSL https://2667.us.kg/alternatif2)"</code></pre>
-                    <button class="copy-button" onclick="copyToClipboard('install-command-4')">
-                        <span class="material-icons">content_copy</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-       <h2>Original Script</h2>
-      <p>Script from <a href="https://github.com/dugong-lewat/1clickxray.git" target="_blank">dugong-lewat 🌟 & fork</a> repository for creator support.</p>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Xray Documentation</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <style>
+         body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         line-height: 1.6;
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+         color: #333333;
+         }
+         .container {
+         width: 80%;
+         margin: 0 auto;
+         padding: 20px;
+         }
+         h1, h2, h3 {
+         border-bottom: 1px solid #eaecef;
+         padding-bottom: 0.3em;
+         }
+         table {
+         width: 100%;
+         margin: 20px 0;
+         border-collapse: collapse;
+         border: 1px solid #eaecef;
+         }
+         th, td {
+         padding: 12px;
+         border: 1px solid #eaecef;
+         text-align: left;
+         }
+         th {
+         background-color: #f6f8fa;
+         }
+         code {
+         background-color: #f6f8fa;
+         padding: 2px 4px;
+         border-radius: 4px;
+         font-size: 0.9em;
+         }
+         pre {
+         background-color: #f6f8fa;
+         padding: 10px;
+         border-radius: 4px;
+         overflow-x: auto;
+         position: relative;
+         }
+         .copy-button {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         background-color: #f6f8fa;
+         border: 1px solid #eaecef;
+         color: #333;
+         padding: 5px;
+         border-radius: 4px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+         display: flex;
+         align-items: center;
+         }
+         .copy-button:hover {
+         background-color: #eaecef;
+         }
+         .material-icons {
+         font-size: 1.2em;
+         }
+         .install-options {
+         margin: 20px 0;
+         }
+         .install-option {
+         margin-bottom: 20px;
+         }
+         .note-box {
+         background-color: #f8f9fa;
+         border-left: 4px solid #007bff;
+         padding: 15px;
+         margin: 20px 0;
+         border-radius: 4px;
+         }
+         .warning-box {
+         background-color: #fff3cd;
+         border-left: 4px solid #ffc107;
+         padding: 15px;
+         margin: 20px 0;
+         border-radius: 4px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+      <h3>Documentation 1Clickxray</h3>
+      <h2>Overview</h2>
+      <div class="note-box">
+         <h3>System Requirements</h3>
+         <p>This script is designed for:</p>
+         <ul>
+            <li>Ubuntu operating system</li>
+            <li>Debian operating system</li>
+         </ul>
+         <h3>Important Notes</h3>
+         <ul>
+            <li>After installation, type <code>menu</code> in terminal to display available options</li>
+            <li>This script is safe for reinstallation without requiring VPS rebuild</li>
+            <li>Supports IPv6-Only VPS with specific domain setup requirements</li>
+         </ul>
+      </div>
+      <div class="warning-box">
+         <h3>IPv6 Only VPS Setup Notice</h3>
+         <p>When using IPv6 Only VPS, during domain setup you <strong>must</strong> choose option #2 (use your own domain). Option #1 is not supported for IPv6 Only configurations.</p>
+      </div>
+      <h2>Protocol & Transport</h2>
+      <table>
+         <tr>
+            <th>Protocol & Transport</th>
+            <th>Network Port</th>
+         </tr>
+         <tr>
+            <td>Vmess Websocket</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Vless Websocket</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Trojan Websocket</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks Websocket</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks 2022 Websocket</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Vmess HTTPupgrade</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Vless HTTPupgrade</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Trojan HTTPupgrade</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks HTTPupgrade</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks 2022 HTTPupgrade</td>
+            <td>443 & 80</td>
+         </tr>
+         <tr>
+            <td>Vless XTLS-RPRX-VISION</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Trojan TCP TLS</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Vmess gRPC</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Vless gRPC</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Trojan gRPC</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks gRPC</td>
+            <td>443</td>
+         </tr>
+         <tr>
+            <td>Shadowsocks 2022 gRPC</td>
+            <td>443</td>
+         </tr>
+      </table>
+      <h2>Free Domain Registration</h2>
+      <p>Need a free domain for your project? Register easily at <a href="https://nic.us.kg" target="_blank">NIC US KG</a> to get your domain today!</p>
       <a href="https://nic.us.kg" target="_blank">
+      <img src="https://img.shields.io/badge/Register-Free%20Domain-brightgreen" alt="Register Free Domain">
+      </a>
+      <h2>Installation Guide</h2>
+      <div class="install-options">
+         <div class="install-option">
+            <h3>Option 1: Using wget or curl</h3>
+            <div style="position: relative;">
+               <pre><code id="install-command-1">bash -c "$(wget -qO- https://2667.us.kg/xrayv1)"</code></pre>
+               <button class="copy-button" onclick="copyToClipboard('install-command-1')">
+               <span class="material-icons">content_copy</span>
+               </button>
+            </div>
+            <div style="position: relative;">
+               <pre><code id="install-command-2">bash -c "$(curl -fsSL https://2667.us.kg/xrayv2)"</code></pre>
+               <button class="copy-button" onclick="copyToClipboard('install-command-2')">
+               <span class="material-icons">content_copy</span>
+               </button>
+            </div>
+         </div>
+         <div class="install-option">
+            <h3>Option 2: Alternative Installation Method</h3>
+            <div style="position: relative;">
+               <pre><code id="install-command-3">bash -c "$(wget -qO- https://2667.us.kg/alternatif1)"</code></pre>
+               <button class="copy-button" onclick="copyToClipboard('install-command-3')">
+               <span class="material-icons">content_copy</span>
+               </button>
+            </div>
+            <div style="position: relative;">
+               <pre><code id="install-command-4">bash -c "$(curl -fsSL https://2667.us.kg/alternatif2)"</code></pre>
+               <button class="copy-button" onclick="copyToClipboard('install-command-4')">
+               <span class="material-icons">content_copy</span>
+               </button>
+            </div>
+         </div>
+      </div>
+      <h2>Contributors</h2>
+      <p>
+         <a href="https://github.com/hostinger-bot" target="_blank">hostinger-bot</a> - Original repository owner and GitHub Pages host.
+      </p>
+      <p>
+         <a href="https://github.com/dugong-lewat/1clickxray.git" target="_blank">Dugong Lewat</a> - Creator of the script, forked by me.
+      </p>
+      <a href="https://github.com" target="_blank">
       <img src="https://img.shields.io/badge/1Clickxray-brightgreen" alt="1clickxray.git">
-    </a>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-    <script>
-        hljs.highlightAll();
-
-        function copyToClipboard(elementId) {
-            const command = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(command).then(
-                () => {
-                    alert('Command copied to clipboard!');
-                }).catch(err => {
-                    alert('Failed to copy command!: ', err);
-                });
-        }
-    </script>
-</body>
+      </a>
+      <p>Thanks to <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> for hosting this page.</p>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+      <script>
+         hljs.highlightAll();
+         
+         function copyToClipboard(elementId) {
+             const command = document.getElementById(elementId).innerText;
+             navigator.clipboard.writeText(command).then(
+                 () => {
+                     alert('Command copied to clipboard!');
+                 }).catch(err => {
+                     alert('Failed to copy command!: ', err);
+                 });
+         }
+      </script>
+   </body>
 </html>
